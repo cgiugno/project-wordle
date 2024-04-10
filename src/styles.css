@@ -96,6 +96,14 @@ h1 {
   margin-bottom: 4px;
 }
 
+.keyboard-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
 .cell {
   position: relative;
   width: 20%;
@@ -105,6 +113,33 @@ h1 {
   border: 2px solid var(--color-gray-700);
   border-radius: var(--radius);
   font-size: 2rem;
+}
+
+.key {
+  position: relative;
+  width: 2rem;
+  display: grid;
+  place-content: center;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-gray-700);
+  border-color: var(--color-gray-700);
+  font-size: 1rem;
+}
+
+.key.correct {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: white;
+}
+.key.misplaced {
+  background: var(--color-warning);
+  border-color: var(--color-warning);
+  color: white;
+}
+.key.incorrect {
+  background: var(--color-gray-300);
+  border-color: var(--color-gray-300);
+  color: white;
 }
 
 /*
