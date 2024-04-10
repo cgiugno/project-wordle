@@ -18,6 +18,8 @@ function GuessInput({addGuess, isEnabled}) {
             type="text" 
             value={currGuess} 
             onChange={(event)=> setCurrGuess(event.target.value.toLocaleUpperCase())}
+            minLength={5}
+            maxLength={5}
             pattern='[A-Za-z]{5}'
             title='e.g., five letter word'
             disabled={!isEnabled}/>
